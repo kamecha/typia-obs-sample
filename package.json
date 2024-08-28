@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "obs-websocket-js": "^5.0.6",
+    "type-fest": "^4.25.0",
     "typia": "^6.9.0"
   },
   "devDependencies": {
