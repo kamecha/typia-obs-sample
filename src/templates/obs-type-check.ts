@@ -1,8 +1,9 @@
 import typia from "typia";
 
-import { OBSRequestTypes } from "obs-websocket-js";
+import type { OBSRequestTypes } from "obs-websocket-js";
+import {SimplifyDeep} from "type-fest"
+
+type T = SimplifyDeep<OBSRequestTypes[keyof OBSRequestTypes]>;
 
 export const isRequestType = typia.createIs<keyof OBSRequestTypes>();
-export const isRequestData = typia.createIs<
-  OBSRequestTypes[keyof OBSRequestTypes]
->();
+export const isRequestData = typia.createIs<T>();
