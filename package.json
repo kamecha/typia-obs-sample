@@ -4,6 +4,12 @@
     "typia": "^6.9.0"
   },
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "ts-patch": "^3.2.1",
+    "typescript": "5.5.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "generate": "npx typia generate --input src/templates --output src/generated",
+    "prepare": "ts-patch install && typia patch"
   }
 }
